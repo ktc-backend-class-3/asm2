@@ -4,7 +4,7 @@ import vn.edu.likelion.warehouse.application.WarehouseApplication;
 import vn.edu.likelion.warehouse.entity.ProductEntity;
 import vn.edu.likelion.warehouse.entity.WarehouseEntity;
 import vn.edu.likelion.warehouse.fileHandling.ExcelHandling;
-import vn.edu.likelion.warehouse.model.WarehouseModel;
+import vn.edu.likelion.warehouse.model.WarehouseDTO;
 import vn.edu.likelion.warehouse.service.WarehouseService;
 import vn.edu.likelion.warehouse.service.impl.WarehouseServiceImpl;
 
@@ -30,7 +30,7 @@ public class WarehouseController {
      * @Exception: Ko có exception cần kiểm tra
      */
     public void createWarehouse() {
-        WarehouseModel warehouseModel = new WarehouseModel();
+        WarehouseDTO warehouseModel = new WarehouseDTO();
         System.out.print("Nhập tên kho: ");
         String warehouseName = WarehouseApplication.scanner.nextLine().trim();
         if (warehouseName.isEmpty()) {
@@ -76,7 +76,7 @@ public class WarehouseController {
         // Gửi dữ liệu (ở đây là warehouse_id) tới service để tìm kho theo id
         WarehouseEntity warehouseEntity = warehouseService.findById(warehouse_id);
         if (warehouseEntity != null) {
-            WarehouseModel warehouseModel = new WarehouseModel();
+            WarehouseDTO warehouseModel = new WarehouseDTO();
             System.out.print("Nhập tên kho: ");
             String warehouseName = WarehouseApplication.scanner.nextLine().trim();
             if (warehouseName.isEmpty()) {

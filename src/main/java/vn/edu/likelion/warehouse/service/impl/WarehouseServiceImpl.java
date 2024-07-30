@@ -2,7 +2,7 @@ package vn.edu.likelion.warehouse.service.impl;
 
 import vn.edu.likelion.warehouse.entity.ProductEntity;
 import vn.edu.likelion.warehouse.entity.WarehouseEntity;
-import vn.edu.likelion.warehouse.model.WarehouseModel;
+import vn.edu.likelion.warehouse.model.WarehouseDTO;
 import vn.edu.likelion.warehouse.repository.WarehouseRepo;
 import vn.edu.likelion.warehouse.service.WarehouseService;
 
@@ -29,10 +29,10 @@ public class WarehouseServiceImpl implements WarehouseService {
     }
 
     @Override
-    public void create(WarehouseModel warehouseModel) { repo.create(warehouseModel); }
+    public void create(WarehouseDTO warehouseModel) { repo.create(warehouseModel); }
 
     @Override
-    public WarehouseEntity update(WarehouseModel warehouseModel) {
+    public WarehouseEntity update(WarehouseDTO warehouseModel) {
         return null;
     }
 

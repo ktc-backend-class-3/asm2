@@ -2,7 +2,7 @@ package vn.edu.likelion.warehouse.controller;
 
 import vn.edu.likelion.warehouse.application.WarehouseApplication;
 import vn.edu.likelion.warehouse.entity.UserEntity;
-import vn.edu.likelion.warehouse.model.UserModel;
+import vn.edu.likelion.warehouse.model.UserDTO;
 import vn.edu.likelion.warehouse.service.UserService;
 import vn.edu.likelion.warehouse.service.impl.UserServiceImpl;
 
@@ -32,7 +32,7 @@ public class UserController {
      * @Exception: Ko có exception cần kiểm tra
      */
     public void createUser() {
-        UserModel userModel = new UserModel();
+        UserDTO userModel = new UserDTO();
         System.out.print("Nhập tên nhân viên: ");
         String username = WarehouseApplication.scanner.nextLine().trim();
         if (username.isEmpty()) {
@@ -80,7 +80,7 @@ public class UserController {
         // Tìm kiếm user bằng ID
         UserEntity userEntity = userService.findById(user_id);
         if (userEntity != null) {
-            UserModel userModel = new UserModel();
+            UserDTO userModel = new UserDTO();
             System.out.print("Vui lòng nhập nhập mã kho cho nhân viên: ");
             String warehouseID = WarehouseApplication.scanner.nextLine().trim();
             int warehouse_id;
@@ -134,7 +134,7 @@ public class UserController {
      * @Output: Ko có dữ liệu trả về
      * @Exception: Ko có exception cần kiểm tra
      */
-    public void listUser() {
+    private void listUser() {
         if (userList == null) userList = userService.findAll();
         System.out.println("Danh sách nhân viên có trong hệ thống:");
         for (UserEntity u: userList) {

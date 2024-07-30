@@ -1,10 +1,10 @@
 package vn.edu.likelion.warehouse.repository;
 
-import vn.edu.likelion.warehouse.connection.ConnectDB;
+import vn.edu.likelion.warehouse.configuration.ConnectDB;
 import vn.edu.likelion.warehouse.entity.RoleEntity;
 import vn.edu.likelion.warehouse.entity.UserEntity;
 import vn.edu.likelion.warehouse.entity.WarehouseEntity;
-import vn.edu.likelion.warehouse.model.UserModel;
+import vn.edu.likelion.warehouse.model.UserDTO;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -162,7 +162,7 @@ public class UserRepo {
         return null;
     }
 
-    public void create(UserModel userModel) {
+    public void create(UserDTO userModel) {
         try {
             String sqlQuery = "insert into tbl_users (username, password, role_id, created_by, created_date) values (?, ?, ?, ?, ?)";
             conn.openConnect();
@@ -189,7 +189,7 @@ public class UserRepo {
         }
     }
 
-    public UserEntity update(UserModel userModel) {
+    public UserEntity update(UserDTO userModel) {
         try {
             String sqlQuery = "update tbl_users set warehouse_id = ?, updated_by = ?, updated_date = ? where id = ? ";
             conn.openConnect();

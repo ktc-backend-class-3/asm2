@@ -1,10 +1,10 @@
 package vn.edu.likelion.warehouse.repository;
 
 import vn.edu.likelion.warehouse.application.WarehouseApplication;
-import vn.edu.likelion.warehouse.connection.ConnectDB;
+import vn.edu.likelion.warehouse.configuration.ConnectDB;
 import vn.edu.likelion.warehouse.entity.ProductEntity;
 import vn.edu.likelion.warehouse.entity.WarehouseEntity;
-import vn.edu.likelion.warehouse.model.WarehouseModel;
+import vn.edu.likelion.warehouse.model.WarehouseDTO;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -135,7 +135,7 @@ public class WarehouseRepo {
         return null;
     }
 
-    public void create(WarehouseModel warehouseModel) {
+    public void create(WarehouseDTO warehouseModel) {
         try {
             String sqlQuery = "insert into tbl_warehouses (name, address,created_by, created_date) values (?, ?)";
             conn.openConnect();

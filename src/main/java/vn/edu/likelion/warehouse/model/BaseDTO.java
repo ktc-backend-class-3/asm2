@@ -8,7 +8,7 @@ import java.sql.Date;
  * Model sau này dùng để lưu dữ liệu từ phía client hoặc console
  * Dữ liệu trong model thường khác kiểu hoặc khác cấu trúc, nên sẽ được xử lý trước khi convert sang Entity
  */
-public abstract class BaseModel {
+public abstract class BaseDTO {
     private int id;
     private int created_by;
     private Date created_date;

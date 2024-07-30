@@ -1,4 +1,4 @@
-package vn.edu.likelion.warehouse.connection;
+package vn.edu.likelion.warehouse.configuration;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

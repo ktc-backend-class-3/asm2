@@ -6,7 +6,7 @@ import vn.edu.likelion.warehouse.entity.UserEntity;
  * @Name: WarehouseModel
  * @Description: Model thường là để lưu dữ liệu gửi đến từ client hoặc console nên có thể cấu trúc sẽ khác Entity
  */
-public class WarehouseModel extends BaseModel {
+public class WarehouseDTO extends BaseDTO {
     private UserEntity user;
     private String name;
     private String address;

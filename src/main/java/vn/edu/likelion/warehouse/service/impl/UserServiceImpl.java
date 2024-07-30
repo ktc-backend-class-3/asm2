@@ -1,7 +1,7 @@
 package vn.edu.likelion.warehouse.service.impl;
 
 import vn.edu.likelion.warehouse.entity.UserEntity;
-import vn.edu.likelion.warehouse.model.UserModel;
+import vn.edu.likelion.warehouse.model.UserDTO;
 import vn.edu.likelion.warehouse.repository.UserRepo;
 import vn.edu.likelion.warehouse.service.UserService;
 
@@ -33,10 +33,10 @@ public class UserServiceImpl implements UserService {
     public ArrayList<UserEntity> findAll() { return repo.findAll(); }
 
     @Override
-    public void create(UserModel userModel) { repo.create(userModel); }
+    public void create(UserDTO userModel) { repo.create(userModel); }
 
     @Override
-    public UserEntity update(UserModel userModel) { return repo.update(userModel); }
+    public UserEntity update(UserDTO userModel) { return repo.update(userModel); }
 
     @Override
     public void remove(int id) { repo.remove(id); }

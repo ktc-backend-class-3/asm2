@@ -4,7 +4,7 @@ package vn.edu.likelion.warehouse.model;
  * @Name: UserModel
  * @Description: Model thường là để lưu dữ liệu gửi đến từ client hoặc console nên có thể cấu trúc sẽ khác Entity
  */
-public class UserModel extends BaseModel {
+public class UserDTO extends BaseDTO {
     private String username;
     private String password;
     private int role_id;

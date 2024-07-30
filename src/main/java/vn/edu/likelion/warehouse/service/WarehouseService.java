@@ -2,7 +2,7 @@ package vn.edu.likelion.warehouse.service;
 
 import vn.edu.likelion.warehouse.entity.ProductEntity;
 import vn.edu.likelion.warehouse.entity.WarehouseEntity;
-import vn.edu.likelion.warehouse.model.WarehouseModel;
+import vn.edu.likelion.warehouse.model.WarehouseDTO;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * đây cũng là lớp interface service nên chỉ khai báo bổ sung các function dành riêng cho warehouse mà trong BaseService ko có
  * ko override lại các function trong BaseService
  */
-public interface WarehouseService extends BaseService<WarehouseEntity, WarehouseModel> {
+public interface WarehouseService extends BaseService<WarehouseEntity, WarehouseDTO> {
     WarehouseEntity findById(int warehouse_id);
     void importProduct(ArrayList<ProductEntity> productList, int warehouse_id);
 }

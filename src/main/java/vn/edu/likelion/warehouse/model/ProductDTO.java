@@ -7,7 +7,7 @@ import vn.edu.likelion.warehouse.entity.WarehouseEntity;
  * @Name: ProductModel
  * @Description: Model thường là để lưu dữ liệu gửi đến từ client hoặc console nên có thể cấu trúc sẽ khác Entity
  */
-public class ProductModel {
+public class ProductDTO {
     private WarehouseEntity warehouseEntity;
     private String name;
     private String description;
